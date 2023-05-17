@@ -1,0 +1,133 @@
+body {
+  background: url(https://imgbb.su/images/2023/04/21/photo_2023-04-21_12-09-49747e2919812e6b84.jpg) no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+ }
+ * {
+font-family: sans-serif;
+box-sizing: border-box;
+}
+th, td {
+font-size: 18px;
+padding: 10px;
+}
+table {
+  opacity: 0.8
+}
+th {
+background: #af9908;
+color: #fff;
+}
+td {
+background: #eee;
+}
+a {
+text-decoration: none;
+transition: 0.2s ease;
+color: #3f75c5;
+}
+td:nth-child(7) > a {
+color: #c22a2a;
+}
+a:hover {
+opacity: 0.7;
+}
+p {
+font-style: italic;
+}
+textarea{
+padding: 10px;
+display: block;
+min-height: 30px;
+width: 250px;
+margin-bottom: 10px;
+}
+textarea {
+resize: vertical;
+height: 80px;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+a {
+color: #7c9ab7;
+font-weight: bold;
+text-decoration: none;
+}
+
+p {
+margin: 10px 0;
+}
+
+form {
+display: flex;
+flex-direction: column;
+width: 400px;
+}
+
+input {
+margin: 10px 0;
+padding: 10px;
+border: unset;
+border-bottom: 2px solid #e3e3e3;
+outline: none;
+}
+
+button {
+padding: 10px;
+background: #e3e3e3;
+border: unset;
+cursor: pointer;
+}
+
+.error {
+border-bottom: 2px solid #ff4332;
+}
+
+.msg {
+border: 2px solid #ffa908;
+border-radius: 3px;
+padding: 10px;
+text-align: center;
+font-weight: bold;
+}
+
+.none {
+display: none;
+}
+
+.logout {
+color: #b7625c;
+}
+body {
+background-size: 100%;
+margin: 0;
+padding: 0;
+}
+html {
+
+background-image: url(https://imgbb.su/images/2023/04/21/photo_2023-04-21_12-09-49747e2919812e6b84.jpg);
+
+background-repeat: no-repeat;
+
+background-position: center center;
+
+background-attachment: fixed;
+
+-webkit-background-size: cover;
+
+-moz-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+margin: 0;
+padding: 0;
+
+}
+
