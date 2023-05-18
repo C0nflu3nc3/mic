@@ -12,24 +12,31 @@
 ## Логика работы сайта:
 ```mermaid 
 flowchart TD;
-vhod(Вход) 
-User_Acc(Аккаунт Юзера)
+vhod((Вход))
+style vhod fill : blue 
+style User_Acc fill : blue 
+style Admin_Acc fill : blue 
+User_Acc((Аккаунт Юзера))
 UserScore(Счёт команды)
 UserOp(Операции команды, как она получила деньги)
 Perevod1(Кнопка переводов)
 Perevod2(Кнопка переводов)
 OtherTeam(Счёт Другой команды)
-Perevod1_dop(Минус в операциях отправителя, Плюс у получателя)
+Perevod1_dop{{Минус в операциях отправителя, Плюс у получателя}}
+style Perevod1_dop fill : green 
+style Okna_dop fill : green 
 ifPerevod1(Если указанное количество денег < Счёт команды)
 ifPerevod2(Если указанное количество денег < 0 )
 block(Блокировать)
-Admin_Acc(АККАУНТ АДМИНА)
+style block fill : red 
+Admin_Acc((АККАУНТ АДМИНА))
 AdminScore(Счёт всех команд)
 AdminOp(Операции всех команд, как они получили деньги)
 AdminChange(Кнопка Смены Данных для входа)
 Okna(3 Окна, в которые пишутся данные)
-Okna_dop(Номер команды, Новый Логин и Пароль)
+Okna_dop{{Номер команды, Новый Логин и Пароль}}
 OknaBD(Update В БД)
+style OknaBD fill : red 
 
 vhod-->User_Acc
 User_Acc-->UserScore
