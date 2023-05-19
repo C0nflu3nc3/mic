@@ -73,3 +73,13 @@ OtherTeam-->Perevod1_dop
 - [ ] Добавить и стилизовать кнопку переводов
 - [ ] Стилизовать Вход
 - [ ] Стилизовать Профиль
+
+## DOCKER
+-- подлючиться к базе
+mysql -u user -ppassword
+
+-- поднять
+docker-compose up
+
+-- потушить
+docker-compose down -v
