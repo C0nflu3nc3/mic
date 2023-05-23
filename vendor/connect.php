@@ -1,7 +1,27 @@
 <?php
 
-    $connect = mysqli_connect('localhost', 'root', '', 'micgoods');
+    $servername = "mysql";
+    $username = "user";
+    $password = "password";
+    $dbname = "Testing";
 
-    if (!$connect) {
-        die('Error connect to DataBase');
+    try {
+        
+        $connect = mysqli_connect($servername, $username, $password, $dbname);
+    
+        // Check connection
+        if (!$connect) {
+            throw new Exception("Ошибка соединения с базой: " . mysqli_connect_error());
+        }
+    
+        // Connection successful, perform further operations here
+    
+        // ...
+    
+        // Close the connection
+        // mysqli_close($connect);
+    } catch (Exception $e) {
+        // Catch any exceptions that occurred during the connection attempt
+        echo "Error: " . $e->getMessage();
     }
+    ?>
