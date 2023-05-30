@@ -82,7 +82,11 @@ else header('Location: /');
                 </table>
             </div>
             <div>
-                <h3>Операции</h3>
+                <form action="send1.php">
+                <button class="btn btn-primary" type="submit">Отправить деньги</button>
+            </div>
+            <div>
+                <h3>Все события:</h3>
                 <table class="table table-striped table-bordered">
                     <tr>
                         <th>Период:</th>
@@ -103,10 +107,6 @@ else header('Location: /');
                     }
                 ?>
                 </table>
-            </div>
-            <div>
-                <form action="send1.php">
-                <button class="btn btn-primary" type="submit">Отправить деньги</button>
             </div>
         </div>
         <?php } else {?>

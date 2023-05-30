@@ -29,7 +29,7 @@ CREATE TABLE `Operation` (
   `Score` int(11) DEFAULT NULL,
   `Team` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `Operation` (
 LOCK TABLES `Operation` WRITE;
 /*EXAMPLE*/
 INSERT INTO `Operation`(`Period`, `Comment`, `Score`, `Team`) VALUES 
-('2023-05-17','Да',50,1), ('2023-05-17','Да',50,1),('2023-05-17','Да',50,1), ('2023-05-17','Да',50,2), ('2023-05-17','Да',50,2), ('2023-05-17','Да',50,2), ('2023-05-17','Да',50,3), ('2023-05-17','Да',50,3), ('2023-05-17','Да',50,3), ('2023-05-17','Да',50,4), ('2023-05-17','Да',50,4), ('2023-05-17','Да',50,4), ('2023-05-17','Да',50,5), ('2023-05-17','Да',50,5), ('2023-05-17','Да',50,5), ('2023-05-17','Админский взнос',999999999,6);
+('2023-05-17','is cool',50,1), ('2023-05-18','Yep',30,1),('2023-05-20','loce look',10,1), ('2023-05-17','baby time',10,2), ('2023-05-18','tiger man',15,2), ('2023-05-19','snoopy',30,2), ('2023-05-17','vivaldi',12,3), ('2023-05-19','rock',20,3), ('2023-05-22','sezim',24,3), ('2023-05-17','looser',25,4), ('2023-05-19','selina',20,4), ('2023-05-20','room',18,4), ('2023-05-17','bay',45,5), ('2023-05-18','loft',5,5), ('2023-05-20','stage',12,5), ('2023-05-17','admin',999999999,6);
 /*!40000 ALTER TABLE `Operation` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Operation` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -56,7 +56,7 @@ CREATE TABLE `Teams` (
   `name` varchar(100) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `Teams` (
 
 LOCK TABLES `Teams` WRITE;
 /*EXAMPLE*/
-INSERT INTO `Teams`(`name`, `user_id`) VALUES('Команда 1', 1),('Команда 2', 2),('Команда 3', 3),('Команда 4', 4),('Команда 5', 5), ('Админ', 6)
+INSERT INTO `Teams`(`name`, `user_id`) VALUES('TIGER', 1),('CAT', 2),('DWARF', 3),('BOOMER', 4),('SUN', 5), ('ADMIN', 6);
 /*!40000 ALTER TABLE `Teams` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Teams` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -92,7 +92,7 @@ CREATE TABLE `users` (
 /*EXAMPLE*/
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'1 team','123',_binary '\0'),(2,'2 team','123',_binary '\0'),(3,'3 team','123',_binary '\0'),(4,'4 team','123',_binary '\0'),(5,'5 team','123',_binary '\0'),(6,'admin','123',_binary '');
+INSERT INTO `users` VALUES (1,'team1','123',_binary '\0'),(2,'team2','123',_binary '\0'),(3,'team3','123',_binary '\0'),(4,'team4','123',_binary '\0'),(5,'team5','123',_binary '\0'),(6,'admin','123',_binary '');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
