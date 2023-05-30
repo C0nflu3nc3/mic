@@ -56,6 +56,7 @@ else header('Location: /');
                 </li>
             </ul>
         </div>
+        <?php if ($isAdmin) {?>
         <div class="row content">
             <div>
                 <h3>Очки команд</h3>
@@ -108,6 +109,9 @@ else header('Location: /');
                 <button class="btn btn-primary" type="submit">Отправить деньги</button>
             </div>
         </div>
+        <?php } else {?>
+            <h3>Очки твоей команды:</h3>
+        <?php }?>
     </div>
 </body>
 
