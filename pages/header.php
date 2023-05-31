@@ -27,7 +27,7 @@ if (isset($_SESSION['user'])) {
             <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">
-                        <?= $username ?>
+                    <span class="badge text-bg-info"><?= $username ?></span>
                     </a>
                 </li>
                 <li class="nav-item">
