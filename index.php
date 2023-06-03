@@ -25,7 +25,7 @@ if (isset($_SESSION['user'])) {
         <div class="row content">
             <div class='col-5'></div>
             <div class='col-2'>
-                <form action="vendor/signin.php" method="post">
+                <form action="helper/signin.php" method="post">
                     <p class="text-center">Авторизация</p>
                     <div class="form-outline mb-4 text-start">
                         <label class="form-label" for="login">Логин</label>

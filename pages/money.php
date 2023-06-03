@@ -1,8 +1,8 @@
 <?php
-
-    session_start();
-    require_once 'connect.php';
-    $check_money = mysqli_query($connect, "SELECT sum(Score) as `Score` FROM `Operation` ".$money_condition);
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    /*$check_money = mysqli_query($connect, "SELECT sum(Score) as `Score` FROM `Operation` ".$money_condition);
     $money = $_POST['money'];
     $team = $_POST['team'];
     $teams = $_SESSION['user']['id'];
@@ -24,7 +24,9 @@
         $check_money = $money;
         query($sending);
         query($losing);
-    }
+    }*/
 
-    ?>
-     <!--$_SESSION['user']['isAdmin'];-->
+?>
+<div>
+    <button class="btn btn-primary" type="submit">Отправить деньги</button>
+</div>

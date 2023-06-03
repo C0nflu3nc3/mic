@@ -3,9 +3,6 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-require_once 'vendor/connect.php';
-
-$condition = "";
 
 $TeamsId = $_SESSION['user']['id'];
 $condition = 'where Teams.user_id =' . $TeamsId;
@@ -31,6 +28,6 @@ if ($result) {
 }
 
 // Close the connection
-$connect->close();
+
 ?>
 

@@ -31,7 +31,7 @@ if (isset($_SESSION['user'])) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="vendor/logout.php">Выход</a>
+                    <a class="nav-link" href="helper/logout.php">Выход</a>
                 </li>
             </ul>
         </div>
