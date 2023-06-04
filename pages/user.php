@@ -19,7 +19,7 @@ $result = $stmt->get_result();
 if ($result) {
 
     while ($row = $result->fetch_assoc()) {
-        echo "<h3>Очки твоей команды:<span class=\"badge text-bg-success\">" . $row["score"] . "</span></h3>";
+        echo "<h3>Пилтоны твоей команды:<span class=\"badge text-bg-success\">" . $row["score"] . "</span></h3>";
     }
     $result->close();
 
