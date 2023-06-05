@@ -36,10 +36,12 @@ $queryOperation = mysqli_query($connect, $querytext);
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-
+                <label for="users">Выберите команду:</label>
                 <select class="form-control" id="users">
                     <?php include("api/get_users.php"); ?>
                 </select>
+
+                
 
             </div>
             <div class="modal-footer">
