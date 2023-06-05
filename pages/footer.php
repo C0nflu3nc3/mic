@@ -20,7 +20,7 @@ $querytext = 'SELECT `name` as `Name`, `Score`, `Period`,`Comment` FROM `Teams` 
 Operation.Team ' . $condition . ' ORDER by `Period`';
 $queryOperation = mysqli_query($connect, $querytext);
 
-$connect->close();
+//$connect->close();
 ?>
 <!-- Button отправки денег -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -36,7 +36,11 @@ $connect->close();
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+
+                <select class="form-control" id="users">
+                    <?php include("api/get_users.php"); ?>
+                </select>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
