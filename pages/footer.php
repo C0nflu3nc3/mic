@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 $condition = "";
 
 if (!$isAdmin) {
-    $TeamsId = $_SESSION['user']['id']; 
+    $TeamsId = $_SESSION['user']['id'];
     $condition = 'where Teams.user_id =' . $TeamsId;
 }
 /*ob_flush();
@@ -22,59 +22,59 @@ $queryOperation = mysqli_query($connect, $querytext);
 
 $connect->close();
 ?>
-        <!-- Button отправки денег -->
-<!-- Button trigger modal -->
+<!-- Button отправки денег -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
+    Отправить деньги команде
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Форма отправки денег</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Отправить</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-    <div>
-        <h3>Все события:</h3>
-        <table class="table table-striped table-bordered">
+<div>
+    <h3>Все события:</h3>
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>Период:</th>
+            <th>Название команды:</th>
+            <th>Очки:</th>
+            <th>Комментарий:</th>
+        </tr>
+        <?php
+        while ($data = mysqli_fetch_array($queryOperation, MYSQLI_ASSOC)) {
+            ?>
             <tr>
-                <th>Период:</th>
-                <th>Название команды:</th>
-                <th>Очки:</th>
-                <th>Комментарий:</th>
+                <td>
+                    <?= $data['Period'] ?>
+                </td>
+                <td>
+                    <?= $data['Name'] ?>
+                </td>
+                <td>
+                    <?= $data['Score'] ?>
+                </td>
+                <td>
+                    <?= $data['Comment'] ?>
+                </td>
             </tr>
             <?php
-            while ($data = mysqli_fetch_array($queryOperation, MYSQLI_ASSOC)) {
-                ?>
-                <tr>
-                    <td>
-                        <?= $data['Period'] ?>
-                    </td>
-                    <td>
-                        <?= $data['Name'] ?>
-                    </td>
-                    <td>
-                        <?= $data['Score'] ?>
-                    </td>
-                    <td>
-                        <?= $data['Comment'] ?>
-                    </td>
-                </tr>
-                <?php
-            }
-            ?>
-        </table>
-    </div>
+        }
+        ?>
+    </table>
+</div>
+
 </html>
