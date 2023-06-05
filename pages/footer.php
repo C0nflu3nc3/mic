@@ -41,8 +41,9 @@ $queryOperation = mysqli_query($connect, $querytext);
                     <?php include("api/get_users.php"); ?>
                 </select>
 
+                <label for="PLT">Количество PLT:</label>
+                <input type="number" min="0.00" step="0.001" value="1.00" id="PLT" class="form-control" placeholder="цена">
                 
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
