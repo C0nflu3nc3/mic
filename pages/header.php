@@ -14,6 +14,7 @@ if (isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <title>MIC - Очки команды</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
