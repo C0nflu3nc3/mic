@@ -8,6 +8,7 @@ if (isset($_SESSION['user'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,32 +22,34 @@ if (isset($_SESSION['user'])) {
 <body>
     <div class='container-fluid text-center'>
         <div class="row header"></div>
-        <div class="row content">
-            <div class='col-5'></div>
-            <div class='col-2'>
+        <div class="d-flex justify-content-center">
+            <div class='col-5'>
                 <form action="helper/signin.php" method="post">
                     <p class="text-center">Авторизация</p>
                     <div class="form-outline mb-4 text-start">
                         <label class="form-label" for="login">Логин</label>
-                        <input type="text" name="login" id="login" class="form-control" placeholder="Введите свой логин" />
+                        <input type="text" name="login" id="login" class="form-control"
+                            placeholder="Введите свой логин" />
                     </div>
 
                     <div class="form-outline mb-4 text-start">
                         <label class="form-label" for="password">Пароль</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Введите пароль"/>
+                        <input type="password" name="password" id="password" class="form-control"
+                            placeholder="Введите пароль" />
                     </div>
                     <?php
-                        if (isset($_SESSION['user'])) {
-                            if ($_SESSION['message']) {
-                                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
-                            }
-                            unset($_SESSION['message']);
+                    if (isset($_SESSION['user'])) {
+                        if ($_SESSION['message']) {
+                            echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
                         }
+                        unset($_SESSION['message']);
+                    }
                     ?>
                     <button type="submit" class="btn btn-primary btn-block mb-4">Войти</button>
                 </form>
             </div>
-            <div class='col-5'></div>
         </div>
+    </div>
 </body>
-</html> 
+
+</html>
