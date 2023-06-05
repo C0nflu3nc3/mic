@@ -44,6 +44,9 @@ $queryOperation = mysqli_query($connect, $querytext);
                 <label for="PLT">Количество PLT:</label>
                 <input type="number" min="0.00" step="0.001" value="1.00" id="PLT" class="form-control" placeholder="цена">
                 
+                <label for="PLT">Коментарий:</label>
+                <input type="text" class="form-control" id="comment" placeholder="Введите сообщение команде">
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
