@@ -43,8 +43,14 @@ $queryOperation = mysqli_query($connect, $querytext);
                     </select>
 
                     <label for="PLT">Количество PLT:</label>
-                    <input name="score" type="number" min="0.00" step="0.001" value="1.00" id="PLT" class="form-control"
-                        placeholder="цена">
+                    <input  name="score" 
+                            type="number" 
+                            min=<?php get_plt($connect, $TeamsId) * -1?> 
+                            step="1" 
+                            value="1" 
+                            id="PLT" 
+                            class="form-control"
+                            placeholder="цена">
 
                     <label for="PLT">Коментарий:</label>
                     <input name="comment" type="text" class="form-control" id="comment"
