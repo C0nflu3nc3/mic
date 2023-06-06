@@ -30,3 +30,4 @@ if (isset($_SESSION['user'])) {
             <a class="nav-link" href="helper/logout.php">Выход</a>
         </li>
     </ul>
+    <div class="container">

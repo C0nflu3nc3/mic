@@ -47,7 +47,8 @@ $queryOperation = mysqli_query($connect, $querytext);
                         placeholder="цена">
 
                     <label for="PLT">Коментарий:</label>
-                    <input name="comment" type="text" class="form-control" id="comment" placeholder="Введите сообщение команде">
+                    <input name="comment" type="text" class="form-control" id="comment"
+                        placeholder="Введите сообщение команде">
 
                 </div>
                 <div class="modal-footer">
@@ -88,6 +89,7 @@ $queryOperation = mysqli_query($connect, $querytext);
         }
         ?>
     </table>
+</div>
 </div>
 
 </html>
