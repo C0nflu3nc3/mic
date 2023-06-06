@@ -5,6 +5,7 @@ if (!isset($_SESSION)) {
 if (isset($_SESSION['user'])) {
     $username = $_SESSION['user']['name'];
 }
+require 'api/functions.php';
 ?>
 
 <!doctype html>

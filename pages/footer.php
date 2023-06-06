@@ -4,9 +4,9 @@ if (!isset($_SESSION)) {
 }
 
 $condition = "";
-
+$TeamsId = $_SESSION['user']['id'];
+    
 if (!$isAdmin) {
-    $TeamsId = $_SESSION['user']['id'];
     $condition = 'where Teams.user_id =' . $TeamsId;
 }
 /*ob_flush();
@@ -17,10 +17,9 @@ var_dump($data);
 file_put_contents(__DIR__ . '/log.txt', ob_get_flush(), FILE_APPEND);*/
 
 $querytext = 'SELECT `name` as `Name`, `Score`, `Period`,`Comment` FROM `Teams` JOIN `Operation` ON Teams.user_id =
-Operation.Team ' . $condition . ' ORDER by `Period`';
+Operation.Team ' . $condition . ' ORDER by `Period` DESC';
 $queryOperation = mysqli_query($connect, $querytext);
 
-//$connect->close();
 ?>
 <!-- Button отправки денег -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -34,18 +33,30 @@ $queryOperation = mysqli_query($connect, $querytext);
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Форма отправки денег</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
                 <div class="modal-body">
-                    <label for="users">Выберите команду:</label>
-                    <select class="form-control" id="users" name="user">
+                    <?php
+                        if (!$isAdmin) {
+                            echo '<input name="parent" type="hidden" class="form-control" id="parent" value="'.$TeamsId.'>';
+                        } else {
+                            ?>
+                            <label for="userSRC">Выберите команду отправителя:</label>
+                            <select class="form-control" id="userSRC" name="parent">
+                                <?php include("api/get_users.php"); ?>
+                            </select> 
+                            <?php 
+                        }                        
+                    ?>
+                    <label for="usersDST">Выберите команду получателя:</label>
+                    <select class="form-control" id="usersDST" name="user">
                         <?php include("api/get_users.php"); ?>
                     </select>
 
                     <label for="PLT">Количество PLT:</label>
                     <input  name="score" 
                             type="number" 
-                            min=<?php echo("'" . get_plt($connect, $TeamsId) *-1 . "'")?> 
+                            min=0 
                             max=<?php echo("'" . get_plt($connect, $TeamsId) . "'")?> 
                             step="1" 
                             value="1" 
@@ -56,7 +67,6 @@ $queryOperation = mysqli_query($connect, $querytext);
                     <label for="PLT">Коментарий:</label>
                     <input name="comment" type="text" class="form-control" id="comment"
                         placeholder="Введите сообщение команде">
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -80,7 +90,7 @@ $queryOperation = mysqli_query($connect, $querytext);
             ?>
             <tr>
                 <td>
-                    <?= $data['Period'] ?>
+                    <?= date("d.m.Y", strtotime($data['Period'])) ?>
                 </td>
                 <td>
                     <?= $data['Name'] ?>

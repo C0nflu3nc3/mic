@@ -11,14 +11,14 @@
 
         if ($result) {
 
-        while ($row = $result->fetch_assoc()) {
-            return $row["score"];
-        }
-        $result->close();
+            while ($row = $result->fetch_assoc()) {
+                return $row["score"];
+            }
+            $result->close();
 
-    } else {
-        return "Error executing the query: " . $connect->error;
-    }
+        } else {
+            return "Error executing the query: " . $connect->error;
+        }
     }
 
 ?>
