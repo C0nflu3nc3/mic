@@ -46,6 +46,7 @@ $queryOperation = mysqli_query($connect, $querytext);
                     <input  name="score" 
                             type="number" 
                             min=<?php echo("'" . get_plt($connect, $TeamsId) *-1 . "'")?> 
+                            max=<?php echo("'" . get_plt($connect, $TeamsId) . "'")?> 
                             step="1" 
                             value="1" 
                             id="PLT" 
