@@ -17,6 +17,9 @@ if (isset($_SESSION['user'])) {
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <title>MIC - Авторизация</title>
 </head>
 

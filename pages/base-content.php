@@ -78,7 +78,7 @@ $queryOperation = mysqli_query($connect, $querytext);
 </div>
 <div>
     <h3>Все события:</h3>
-    <table class="table table-striped table-bordered">
+    <table class="table table-dark table-hover">
         <tr>
             <th>Период:</th>
             <th>Название команды:</th>

@@ -19,6 +19,10 @@ body {
   /* Современные браузеры */
 }
 
+* {
+  font-family: 'Russo One', sans-serif;
+}
+
 body {
   background-image: url('../static/background.jpg');
   background-size: cover;
