@@ -15,6 +15,7 @@ if (isset($_SESSION['user'])) {
     {
         include('pages/user.php');
     }
+    include("pages/base-content.php");
     include("pages/footer.php");
 
 } else

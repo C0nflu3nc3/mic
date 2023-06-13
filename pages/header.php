@@ -21,14 +21,18 @@ require 'api/functions.php';
 </head>
 
 <body>
-    <ul class="nav justify-content-end">
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#"><span class="badge text-bg-info">
-                    <?= $username ?>
-                </span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="helper/logout.php">Выход</a>
-        </li>
-    </ul>
+    <div class='container-fluid text-center'>
+        <div class="row header white">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#"><span class="badge text-bg-info">
+                            <?= $username ?>
+                        </span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="helper/logout.php">Выход</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="container">

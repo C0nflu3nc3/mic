@@ -22,9 +22,12 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <div class='container-fluid text-center'>
-        <div class="row header"></div>
+        <div class="row header white"></div>
         <div class="d-flex justify-content-center">
-            <div class='col-5'>
+            <div class='col-3'>
+                <img src="./static/logo.jpg" title="logo" alt="logo"/>
+            </div>
+            <div class='col-3'>
                 <form action="helper/signin.php" method="post">
                     <p class="text-center">Авторизация</p>
                     <div class="form-outline mb-4 text-start">
