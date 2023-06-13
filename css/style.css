@@ -2,7 +2,7 @@
   --main-bg-color: #7A6C45;
   --main-bg-primary: #40af46;
   --main-bg-white: #ffffff;
-  --main-bg-gold: #d39d1d;
+  --main-bg-gold: #a18a56;
   --main-bg-black: #171717;
 }
 
@@ -44,8 +44,22 @@ body {
   min-height: 70px !important;
 }
 
+.cartheader {
+  min-height: 70px !important;
+  width: 100vw;
+  /*position: fixed;*/
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  /*padding-top: 30px;/*
+  /*bottom: 0px;
+  z-index: 1000;*/
+  background-color: var(--main-bg-black);
+  background: linear-gradient(180deg, rgba(23,23,23,1) 50%, rgba(255,255,255,0) 100%);
+}
+
 .footer {
-  min-height:200px;
+  min-height:130px;
   width: 100vw;
   position: fixed;
   display: flex;
@@ -59,6 +73,6 @@ body {
 }
 
 .footer>h1 {
-  font-size: 100px;
+  font-size: 80px;
   color: var(--main-bg-gold);
 }

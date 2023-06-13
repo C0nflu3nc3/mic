@@ -25,7 +25,7 @@ require 'api/functions.php';
 
 <body>
     <div class='container-fluid text-center'>
-        <div class="row header white">
+        <div class="row header white cartheader">
             <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#"><span class="badge text-bg-info">
