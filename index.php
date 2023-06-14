@@ -28,7 +28,7 @@ if (isset($_SESSION['user'])) {
         <div class="row header white"></div>
         <div class="d-flex justify-content-center">
             <div class='col-3'>
-                <img src="./static/logo.png" title="logo" alt="logo" width="250" height="250"/>
+                <img src="./static/logo.png" title="logo" alt="logo" width="200" height="200"/>
             </div>
             <div class='col-3'>
                 <form action="helper/signin.php" method="post">
