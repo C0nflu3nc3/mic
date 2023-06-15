@@ -59,7 +59,7 @@ body {
 }
 
 .footer {
-  min-height:100px;
+  min-height:130px;
   width: 100vw;
   position: fixed;
   display: flex;
