@@ -25,7 +25,7 @@ body {
 
 body {
   background-image: url('../static/background.jpg');
-  background-size: cover;
+  background-size: 100vw 100vh;
 }
 
 .error {
@@ -40,12 +40,30 @@ body {
   font-weight: bold;
 }
 
+#header {
+  position: sticky;
+  top: 0px;
+}
+
 .header {
-  min-height: 70px !important;
+  min-height: 130px !important;
+}
+
+.header #site-name {
+  font-size: 80px;
+  color: var(--main-bg-gold);
+  opacity: 0.5;
+  flex: 1;
+  align-self: end;
+}
+
+.header #user-controls {
+  width: auto;
+  align-self: center;
 }
 
 .cartheader {
-  min-height: 70px !important;
+  min-height: 130px !important;
   width: 100vw;
   /*position: fixed;*/
   display: flex;
@@ -62,7 +80,8 @@ body {
   min-height:130px;
   width: 100vw;
   position: fixed;
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: start;
   justify-content: center;
   padding-top: 30px;

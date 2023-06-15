@@ -24,9 +24,10 @@ require 'api/functions.php';
 </head>
 
 <body>
-    <div class='container-fluid text-center'>
+    <div class='container-fluid text-center' id="header">
         <div class="row header white cartheader">
-            <ul class="nav justify-content-end">
+            <label class="text-center" id="site-name">ПИЛТОВЕР</label>
+            <ul class="nav justify-content-end" id="user-controls">
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#"><span class="badge text-bg-info">
                             <?= $username ?>
