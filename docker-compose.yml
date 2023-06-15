@@ -46,6 +46,6 @@ services:
       PMA_ARBITRARY: 1
     restart: always
     ports:
-      - 9999:80
+      - 80:9999
 volumes:
   dbdata:
