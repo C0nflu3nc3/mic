@@ -1,8 +1,8 @@
 <?php
 
     $servername = "mysql";
-    $username = "user";
-    $password = "password";
+    $username = "mic";
+    $password = "2627376jfk!@#";
     $dbname = "micbd";
 
     try {
