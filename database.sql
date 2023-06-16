@@ -31,8 +31,7 @@ CREATE TABLE `Teams` (
   `name` varchar(100) DEFAULT NULL, 
   `user_id` int(11) );
 
-INSERT INTO `Teams`(`name`, `user_id`)
-VALUES ('Администрация',1)
+INSERT INTO `Teams`(`name`, `user_id`) VALUES ('Администрация',1)
 
 /*('Команда 1', 1),('Команда 2', 2),('Команда 3', 3),('Команда 4', 4),('Команда 5', 5), ('Админ', 6)
 
