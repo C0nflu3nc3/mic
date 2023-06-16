@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ///Убираем из текущей команды
     $score = -1*$score;
     $user =  $_POST["parent"];
-    $comment = "Передача  PLT команде ".$NameCommand;
+    $comment .= ": Передача  PLT команде ".$NameCommand;
     if (!$stmt->execute()) {
         echo "Error: " . $stmt->error;
     }

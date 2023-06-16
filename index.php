@@ -32,7 +32,7 @@ if (isset($_SESSION['user'])) {
             </div>
             <div class='col-3'>
                 <form action="helper/signin.php" method="post">
-                    <p class="text-center">Авторизация</p>
+                    <h1 class="text-center">Авторизация</h1>
                     <div class="form-outline mb-4 text-start">
                         <label class="form-label" for="login">Логин</label>
                         <input type="text" name="login" id="login" class="form-control"
