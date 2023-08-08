@@ -28,3 +28,6 @@ mysql -u user -ppassword;
 mysqldump -u user -ppassword --no-tablespaces Testing > dump.sql;
 -- дамп в базу
 mysql -u user -ppassword < dump.sql;
+
+
+ALTER USER 'mic' IDENTIFIED BY '180780Kaf!';
