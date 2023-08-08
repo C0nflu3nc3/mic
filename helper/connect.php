@@ -2,7 +2,7 @@
 
     $servername = "mysql";
     $username = "mic";
-    $password = "2627376jfk!@#";
+    $password = "180780Kaf!";
     $dbname = "micbd";
 
     try {
